@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sudoku Game</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section class="card">
+      <header class="hero">
+        <div class="hero-content">
+          <div>
+            <p class="eyebrow">Daily puzzle</p>
+            <h1>Sudoku Game</h1>
+            <p class="subtitle">A polished, responsive experience for quick solving sessions.</p>
+          </div>
+          <button id="theme-toggle" class="theme-toggle" type="button" aria-pressed="false">
+            <span aria-hidden="true">🌙</span>
+            <span>Dark mode</span>
+          </button>
+        </div>
+      </header>
+
+      <div class="content-grid">
+        <section class="game-panel" aria-label="Sudoku game area">
+          <div id="sudoku-board" aria-label="Sudoku board"></div>
+
+          <div class="controls">
+            <label class="difficulty-picker" for="difficulty-selector">
+              <span>Difficulty</span>
+              <select id="difficulty-selector">
+                <option value="easy">Easy</option>
+                <option value="medium" selected>Medium</option>
+                <option value="hard">Hard</option>
+              </select>
+            </label>
+            <button id="new-game" type="button">New Game</button>
+            <button id="hint" type="button">Hint</button>
+            <button id="check-solution" type="button">Check Solution</button>
+            <span id="game-meta" class="game-meta" aria-live="polite"></span>
+            <span id="timer" class="game-timer" aria-live="polite">Time: 00:00</span>
+            <span id="message" role="status" aria-live="polite"></span>
+          </div>
+        </section>
+
+        <aside class="leaderboard-panel" aria-labelledby="leaderboard-title">
+          <section class="leaderboard" aria-labelledby="leaderboard-title">
+            <div class="leaderboard-header">
+              <h2 id="leaderboard-title">Top 10 Leaderboard</h2>
+              <p>Fastest solved puzzles saved in this browser.</p>
+            </div>
+            <div class="leaderboard-table-wrap">
+              <table class="leaderboard-table" aria-describedby="leaderboard-description">
+                <caption id="leaderboard-description" class="sr-only">Fastest 10 completed games</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Rank</th>
+                    <th scope="col">Player</th>
+                    <th scope="col">Difficulty</th>
+                    <th scope="col">Time</th>
+                    <th scope="col">Hints</th>
+                    <th scope="col">Clues</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Status</th>
+                  </tr>
+                </thead>
+                <tbody id="leaderboard-list"></tbody>
+              </table>
+            </div>
+          </section>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <script src="/static/main.js"></script>
+</body>
+</html>

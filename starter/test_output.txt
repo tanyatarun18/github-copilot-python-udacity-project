@@ -1,0 +1,63 @@
+﻿============================= test session starts =============================
+platform win32 -- Python 3.14.5, pytest-9.1.1, pluggy-1.6.0 -- C:\Users\LENOVO\AppData\Local\Programs\Python\Python314\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\LENOVO\Desktop\github-copilot-python-udacity-project\starter
+configfile: pytest.ini
+testpaths: .
+plugins: anyio-4.13.0, flask-1.3.0
+collecting ... collected 52 items
+
+test_app.py::TestIndexRoute::test_index_returns_200 PASSED               [  1%]
+test_app.py::TestIndexRoute::test_index_returns_html PASSED              [  3%]
+test_app.py::TestIndexRoute::test_index_includes_leaderboard_section PASSED [  5%]
+test_app.py::TestIndexRoute::test_index_includes_dark_mode_toggle PASSED [  7%]
+test_app.py::TestIndexRoute::test_index_includes_timer_label PASSED      [  9%]
+test_app.py::TestNewGameRoute::test_new_game_returns_json PASSED         [ 11%]
+test_app.py::TestNewGameRoute::test_new_game_returns_puzzle PASSED       [ 13%]
+test_app.py::TestNewGameRoute::test_new_game_default_clues PASSED        [ 15%]
+test_app.py::TestNewGameRoute::test_new_game_custom_clues PASSED         [ 17%]
+test_app.py::TestNewGameRoute::test_new_game_stores_puzzle_in_current PASSED [ 19%]
+test_app.py::TestNewGameRoute::test_new_game_puzzle_matches_response PASSED [ 21%]
+test_app.py::TestNewGameRoute::test_new_game_creates_valid_solution PASSED [ 23%]
+test_app.py::TestCheckRoute::test_check_requires_puzzle_in_progress PASSED [ 25%]
+test_app.py::TestCheckRoute::test_check_returns_json PASSED              [ 26%]
+test_app.py::TestCheckRoute::test_check_empty_board_has_incorrect_cells PASSED [ 28%]
+test_app.py::TestCheckRoute::test_check_correct_solution_returns_empty_incorrect PASSED [ 30%]
+test_app.py::TestCheckRoute::test_check_complete_solution_reports_solved PASSED [ 32%]
+test_app.py::TestCheckRoute::test_check_incorrect_cells_identified PASSED [ 34%]
+test_app.py::TestCheckRoute::test_check_multiple_incorrect_cells PASSED  [ 36%]
+test_app.py::TestCheckRoute::test_check_correct_cells_not_flagged PASSED [ 38%]
+test_app.py::TestHintRoute::test_hint_fills_one_empty_cell PASSED        [ 40%]
+test_app.py::TestGameFlow::test_new_game_then_check_flow PASSED          [ 42%]
+test_app.py::TestGameFlow::test_multiple_games_are_independent PASSED    [ 44%]
+test_app.py::TestGameFlow::test_check_uses_latest_solution PASSED        [ 46%]
+test_sudoku_logic.py::TestBoardCreation::test_create_empty_board PASSED  [ 48%]
+test_sudoku_logic.py::TestBoardCreation::test_deep_copy_creates_independent_board PASSED [ 50%]
+test_sudoku_logic.py::TestValidation::test_is_safe_empty_cell_with_valid_number PASSED [ 51%]
+test_sudoku_logic.py::TestValidation::test_is_safe_duplicate_in_row PASSED [ 53%]
+test_sudoku_logic.py::TestValidation::test_is_safe_duplicate_in_column PASSED [ 55%]
+test_sudoku_logic.py::TestValidation::test_is_safe_duplicate_in_3x3_box PASSED [ 57%]
+test_sudoku_logic.py::TestValidation::test_is_safe_valid_in_different_box PASSED [ 59%]
+test_sudoku_logic.py::TestValidation::test_is_safe_number_range PASSED   [ 61%]
+test_sudoku_logic.py::TestFillBoard::test_fill_board_completes_empty_board PASSED [ 63%]
+test_sudoku_logic.py::TestFillBoard::test_fill_board_has_all_digits_in_each_row PASSED [ 65%]
+test_sudoku_logic.py::TestFillBoard::test_fill_board_has_all_digits_in_each_column PASSED [ 67%]
+test_sudoku_logic.py::TestFillBoard::test_fill_board_has_all_digits_in_each_3x3_box PASSED [ 69%]
+test_sudoku_logic.py::TestRemoveCells::test_remove_cells_reduces_clues PASSED [ 71%]
+test_sudoku_logic.py::TestRemoveCells::test_remove_cells_target_accuracy PASSED [ 73%]
+test_sudoku_logic.py::TestGeneratePuzzle::test_generate_puzzle_returns_tuple PASSED [ 75%]
+test_sudoku_logic.py::TestGeneratePuzzle::test_generate_puzzle_default_clues PASSED [ 76%]
+test_sudoku_logic.py::TestGeneratePuzzle::test_generate_puzzle_default_path_has_unique_solution PASSED [ 78%]
+test_sudoku_logic.py::TestGeneratePuzzle::test_generate_puzzle_custom_clues PASSED [ 80%]
+test_sudoku_logic.py::TestGeneratePuzzle::test_generate_puzzle_difficulty_levels[easy-45] PASSED [ 82%]
+test_sudoku_logic.py::TestGeneratePuzzle::test_generate_puzzle_difficulty_levels[medium-35] PASSED [ 84%]
+test_sudoku_logic.py::TestGeneratePuzzle::test_generate_puzzle_difficulty_levels[hard-25] PASSED [ 86%]
+test_sudoku_logic.py::TestGeneratePuzzle::test_generate_puzzle_has_unique_solution[easy] PASSED [ 88%]
+test_sudoku_logic.py::TestGeneratePuzzle::test_generate_puzzle_has_unique_solution[medium] PASSED [ 90%]
+test_sudoku_logic.py::TestGeneratePuzzle::test_generate_puzzle_has_unique_solution[hard] PASSED [ 92%]
+test_sudoku_logic.py::TestGeneratePuzzle::test_generate_puzzle_solution_is_complete PASSED [ 94%]
+test_sudoku_logic.py::TestGeneratePuzzle::test_generate_puzzle_puzzle_is_subset_of_solution PASSED [ 96%]
+test_sudoku_logic.py::TestGeneratePuzzle::test_generate_puzzle_solution_is_valid PASSED [ 98%]
+test_sudoku_logic.py::TestGeneratePuzzle::test_generate_puzzle_independence PASSED [100%]
+
+============================= 52 passed in 4.01s ==============================
