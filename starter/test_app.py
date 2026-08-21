@@ -1,3 +1,4 @@
+
 """
 Integration tests for app.py - Flask routes and game logic.
 """

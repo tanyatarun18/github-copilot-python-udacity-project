@@ -37,7 +37,11 @@ body {
     background: linear-gradient(135deg, var(--bg-start) 0%, var(--bg-end) 100%);
     color: var(--text-primary);
     min-height: 100vh;
-    overflow: hidden;
+
+    /* Allow the page to scroll vertically */
+    overflow-x: hidden;
+    overflow-y: auto;
+
     transition: background 0.2s ease, color 0.2s ease;
 }
 
@@ -73,7 +77,10 @@ body[data-theme="dark"] {
 .app-shell {
     min-height: 100vh;
     display: grid;
-    place-items: center;
+
+    /* Keep content at the top so it can expand naturally */
+    place-items: start center;
+
     padding: clamp(8px, 1.6vw, 16px);
 }
 
